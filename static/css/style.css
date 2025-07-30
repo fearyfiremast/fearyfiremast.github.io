@@ -1,0 +1,7 @@
+body{
+    display: grid;
+    grid-template-columns: minmax(350px, 400px);
+    background-color: antiquewhite;
+    align-self: center;
+}
+
