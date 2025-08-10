@@ -1,7 +1,7 @@
 body{
     display: grid;
     grid-template-columns: minmax(350px, 1fr); 
-    background-color: antiquewhite;
+    background-color: rgb(250, 241, 229);
 
     /*justify-self: center; Can be used to create the original centralized design I wanted
                             Another idea is to create empty columns beside middle column*/
@@ -31,6 +31,10 @@ body{
     border: 2px solid salmon;
 }
 
+.navList li:hover {
+    background-color: salmon;
+}
+
 .navList li a {
    
     font-size: large;
@@ -41,16 +45,25 @@ body{
     width: 95%;
 }
 
-.about > h1 { /* TODO: Shrink blog name as window size decreases */
+.aboutTxt > h1 { /* TODO: Shrink blog name as window size decreases */
     font-size: 3em;
     padding: 0;
     margin: 0;
 }
 
-.about {
+main > section {
     margin-top: 1vh;
     border: 1px solid black;
     padding-left: .4em;
+}
+
+.postContainer > h2 {
+    text-align: center;
+    color: rgb(45, 44, 44);
+    margin: 0;
+    padding: 0;
+    grid-row: 1;
+    font-size: 1.7em;
 }
 
 /* Desktop */
@@ -58,17 +71,22 @@ body{
     .about {
         display: grid;
         grid-template-columns: 3fr 2fr;
-        column-gap: 10px
+        grid-template-rows: minmax();
+        column-gap: 10px;
         
     }
 
-    .about img {
-        width: 100%;
-        height: 100%;
+    .aboutTxt > h1 {
+        text-align: center;
+    }
+    
+    .aboutTxt > p {
+        font-size: 1.2em;
     }
 
-    .about > h1 {
-        text-align: center;
+    .aboutGal > img {
+        width: 100%;
+        height: 100%;
     }
 }
 
