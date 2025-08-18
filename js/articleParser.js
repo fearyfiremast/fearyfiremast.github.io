@@ -6,11 +6,33 @@ const postFeed = document.querySelector("#postContent");
 // Represents JSON file loaded into mem
 let articleFile = null;
 
-/* Retrieves the JSON files stored in 
+/* Retrieves the JSON file. Can make general maybe
  * TODO: Implement
  */
 function loadArticlesJSON() {
-    return [];
+    let toReturn;
+
+    // fetchs file with path attributed to path constant
+    fetch(PATH)
+    .then((response)=> {
+        if (!response.ok) {
+            // Throwing errors is like Java. can get response status
+            throw new Error(`HTTP Error: ${response.statusText}`);
+        }
+        return response.json();
+    })
+    // response.JSON also returns a promise. Thus needs to enter a then
+    // function. May have weird IO buffering behaviour so idea of having const toReturn
+    // var may not work ideally
+    .then((jsonResponse)=> {
+        toReturn = jsonResponse;
+    })
+    // handles errors as a string
+    .catch((responseError)=> {
+        toReturn = jsonResponse
+    });
+
+    return toReturn;
 }
 
 function updatePosts() {
@@ -25,6 +47,9 @@ function updatePosts() {
         articleFile = loadArticlesJSON();
     }
 
+    console.log(articleFile);
+
+    /*
     // handles errors with retrieval
     if (articleFile.length === 0) {
         postFeed.textContent += "HELLO :3";
@@ -61,7 +86,7 @@ function updatePosts() {
         // adds post to feed
         postFeed.appendChild(post);
     }
-    
+    */
 
 }
 
