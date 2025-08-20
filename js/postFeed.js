@@ -1,7 +1,7 @@
 
 const PATH = "/JSON/articles.json"
-const postFeed = document.querySelector("#postContent");
-const feedStatus = new FeedStatus();
+const feedContent = document.querySelector("#postContent");
+const feedHelper = new FeedStatus();
 
 function FeedStatus() {
     // Stores sorted JSON
@@ -14,9 +14,11 @@ function FeedStatus() {
     this.searchKey;
 }
 
+// Fetches and assigns JSON file to feedHelper
 async function loadArticlesJSON() {
-    // fetchs file with path attributed to path constant
-    fetch(PATH)
+    // TODO: Look into reconstructing code to reduce size of function and allow better error handling
+
+    await (fetch(PATH)
     .then((response)=> {
         if (!response.ok) {
             // Throwing errors is like Java. can get response status
@@ -25,14 +27,14 @@ async function loadArticlesJSON() {
         return response.json();
     })
     .then((jsonResponse)=> {
-        feedStatus.articleFile = jsonResponse;
-        console.log(feedStatus.articleFile);
-        return;
+        feedHelper.articleFile = jsonResponse;
     })
     .catch((responseError)=> {
-        console.log("Error added to feedStatus");
-        feedStatus.articleFile = responseError;
-    });
+
+        // Handle error case properly. Will probably crash site if this runs
+        console.log("Error added to feedHelper");
+        feedHelper.articleFile = responseError;
+    }));
 
     return;
 }
@@ -42,11 +44,11 @@ export async function updatePosts() {
     //TODO: add logic for removing all existing posts
 
     // checks if JSON file already exists. If not process Promise
-    if (feedStatus.articleFile === null) {
+    if (feedHelper.articleFile === null) {
         // May be messy as fetch API returns a promise
         await loadArticlesJSON();
-        console.log(feedStatus.articleFile);
-        //postFeed.textContent += feedStatus.articleFile;
+        feedContent.textContent = JSON.stringify(feedHelper.articleFile);
+        //feedContent.textContent += feedHelper.articleFile;
     }
 
     
@@ -78,7 +80,7 @@ export async function updatePosts() {
         //TODO: add class to post, make n=1th of class have different css specs
 
         // adds post to feed
-        postFeed.appendChild(post);
+        feedContent.appendChild(post);
     }
 */
 }
