@@ -1,17 +1,20 @@
-const PATH = "JSON/articles.json"
 
-// Worth considering an id that serves this purpose
+const PATH = "/JSON/articles.json"
 const postFeed = document.querySelector("#postContent");
+const feedStatus = new FeedStatus();
 
-// Represents JSON file loaded into mem
-let articleFile = null;
+function FeedStatus() {
+    // Stores sorted JSON
+    this.buffer;
+    this.cssClass;
+    this.currentPostsDisplayed = 0;
 
-/* Retrieves the JSON file. Can make general maybe
- * TODO: Implement
- */
-function loadArticlesJSON() {
-    let toReturn;
+    // Stores JSON object
+    this.articleFile = null;
+    this.searchKey;
+}
 
+async function loadArticlesJSON() {
     // fetchs file with path attributed to path constant
     fetch(PATH)
     .then((response)=> {
@@ -21,44 +24,35 @@ function loadArticlesJSON() {
         }
         return response.json();
     })
-    // response.JSON also returns a promise. Thus needs to enter a then
-    // function. May have weird IO buffering behaviour so idea of having const toReturn
-    // var may not work ideally
     .then((jsonResponse)=> {
-        toReturn = jsonResponse;
+        feedStatus.articleFile = jsonResponse;
+        console.log(feedStatus.articleFile);
+        return;
     })
-    // handles errors as a string
     .catch((responseError)=> {
-        toReturn = jsonResponse
+        console.log("Error added to feedStatus");
+        feedStatus.articleFile = responseError;
     });
 
-    return toReturn;
+    return;
 }
 
-function updatePosts() {
-
-
+export async function updatePosts() {
     //TODO: add logic for changing search parameters
     //TODO: add logic for removing all existing posts
 
-    // checks if JSON file already exists
-    if (articleFile === null) {
+    // checks if JSON file already exists. If not process Promise
+    if (feedStatus.articleFile === null) {
         // May be messy as fetch API returns a promise
-        articleFile = loadArticlesJSON();
+        await loadArticlesJSON();
+        console.log(feedStatus.articleFile);
+        //postFeed.textContent += feedStatus.articleFile;
     }
 
-    console.log(articleFile);
-
-    /*
-    // handles errors with retrieval
-    if (articleFile.length === 0) {
-        postFeed.textContent += "HELLO :3";
-        return;
-    }
     
     // TODO: read json object and ensure values are okay
 
-    //TODO: Debug
+    /*
     let itemsToAdd = 1;
     let post;
     for (let i = 0; i < itemsToAdd; i++) {
@@ -86,8 +80,5 @@ function updatePosts() {
         // adds post to feed
         postFeed.appendChild(post);
     }
-    */
-
+*/
 }
-
-updatePosts()
