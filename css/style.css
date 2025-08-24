@@ -88,6 +88,11 @@ main > section {
         width: 100%;
         height: 100%;
     }
+
+    .post{
+        display: block;
+        background-color: bisque;
+    }
 }
 
 @media  (40em >= width) {

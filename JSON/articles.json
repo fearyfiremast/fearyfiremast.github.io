@@ -9,7 +9,7 @@
     {
         "name": "My second website",
         "date": "2025-08-23",
-        "thumbnail": "/images/nature/RockyCove.png",
+        "thumbnail": "\\images\\webArticle\\myFirstWebsite\\Default.png",
         "alt": "test alt lol",
         "pagePath": ""
     },
