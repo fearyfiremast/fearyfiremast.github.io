@@ -1,18 +1,36 @@
 
 const PATH = "/JSON/articles.json"
 const feedContent = document.querySelector("#postContent");
-const feedHelper = new FeedStatus();
 
-function FeedStatus() {
-    // Stores sorted JSON
-    this.buffer;
-    this.cssClass;
-    this.currentPostsDisplayed = 0;
+// Class definition then initialization is clunky
+class FeedStatus {
 
-    // Stores JSON object
-    this.articleFile = null;
-    this.searchKey;
+   // array of valid seach keys
+   searchKeys = [
+    "newest-to-oldest"
+   ];
+
+    constructor() {
+        // Stores sorted JSON
+        this.currentPostsDisplayed = 0;
+
+        // Stores JSON object
+        this.postDataList = null;
+        this.searchKeyIndex = 0;
+    }
+
+    /**
+     * Sorts the articles newest to oldest
+     */
+    sortPostsNewestToOldest() {
+        (feedHelper.postDataList).sort((a, b) => {
+            // date attribute is in YYYY-MM-DD form AKA Date only form
+            return  Date.parse(b["date"]) - Date.parse(a["date"]);
+        });  
+    }
 }
+
+const feedHelper = new FeedStatus();
 
 // Fetches and assigns JSON file to feedHelper
 async function loadArticlesJSON() {
@@ -27,13 +45,21 @@ async function loadArticlesJSON() {
         return response.json();
     })
     .then((jsonResponse)=> {
-        feedHelper.articleFile = jsonResponse;
+        
+        feedHelper.postDataList = [];
+        // jsonResponse is returned as an object
+        for (const i in jsonResponse) {
+            feedHelper.postDataList.push(jsonResponse[i])
+        } 
+
+        feedHelper.sortPostsNewestToOldest();
+        
     })
     .catch((responseError)=> {
 
         // Handle error case properly. Will probably crash site if this runs
         console.log("Error added to feedHelper");
-        feedHelper.articleFile = responseError;
+        feedHelper.postDataList = responseError;
     }));
 
     return;
@@ -44,21 +70,21 @@ export async function updatePosts() {
     //TODO: add logic for removing all existing posts
 
     // checks if JSON file already exists. If not process Promise
-    if (feedHelper.articleFile === null) {
-        // May be messy as fetch API returns a promise
+    
+    if (feedHelper.postDataList === null) {
         await loadArticlesJSON();
-        feedContent.textContent = JSON.stringify(feedHelper.articleFile);
-        //feedContent.textContent += feedHelper.articleFile;
+        feedContent.textContent = JSON.stringify(feedHelper.postDataList);
     }
 
-    
-    // TODO: read json object and ensure values are okay
+
+
+
 
     /*
     let itemsToAdd = 1;
     let post;
     for (let i = 0; i < itemsToAdd; i++) {
-        let toAdd = articleFile[i];
+        let toAdd = postDataList[i];
 
         // TODO: Add eventListener on click that will transport the user to the correct page
         // Note: Do this by altering the window object. window.replace.href()

@@ -1,7 +1,21 @@
 [
     {
         "name": "My first website",
-        "Date": "2025-Aug-10",
+        "date": "2025-08-10",
+        "thumbnail": "/images/webArticle/myFirstWebsite/Default.png",
+        "alt": "test alt lol",
+        "pagePath": ""
+    },
+    {
+        "name": "My second website",
+        "date": "2025-08-23",
+        "thumbnail": "/images/nature/RockyCove.png",
+        "alt": "test alt lol",
+        "pagePath": ""
+    },
+    {
+        "name": "My third website",
+        "date": "2020-08-10",
         "thumbnail": "/images/webArticle/myFirstWebsite/Default.png",
         "alt": "test alt lol",
         "pagePath": ""
