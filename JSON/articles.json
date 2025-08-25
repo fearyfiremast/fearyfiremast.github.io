@@ -11,7 +11,7 @@
         "date": "2025-08-23",
         "thumbnail": "\\images\\webArticle\\myFirstWebsite\\Default.png",
         "alt": "test alt lol",
-        "pagePath": ""
+        "pagePath": "\\pages\\testPage.html"
     },
     {
         "name": "My third website",
