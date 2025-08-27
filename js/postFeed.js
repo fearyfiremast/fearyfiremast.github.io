@@ -99,10 +99,12 @@ export async function updatePosts() {
         post = document.createElement("article");
         // TODO: add alt tag to img
         post.innerHTML = `
+            <div class="thumbnail">
+                <img src=${toAdd.thumbnail} alt="image">
+            </div>
             <h3>${toAdd.name}</h3>
-            <img src=${toAdd.thumbnail} alt="image">
             <p>
-                will figure this out later
+                ${toAdd.content}
             </p>`;
 
         post.addEventListener("click", ()=> {

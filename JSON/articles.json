@@ -2,7 +2,8 @@
     {
         "name": "My first website",
         "date": "2025-08-10",
-        "thumbnail": "/images/webArticle/myFirstWebsite/Default.png",
+        "thumbnail": "/images/nature/RockyCove.png",
+        "content": "Hello This is the content for my first website I hope you enjoy it very much. Lol Lmao",
         "alt": "test alt lol",
         "pagePath": ""
     },
@@ -10,6 +11,7 @@
         "name": "My second website",
         "date": "2025-08-23",
         "thumbnail": "\\images\\webArticle\\myFirstWebsite\\Default.png",
+        "content": "",
         "alt": "test alt lol",
         "pagePath": "\\pages\\testPage.html"
     },
@@ -17,6 +19,7 @@
         "name": "My third website",
         "date": "2020-08-10",
         "thumbnail": "/images/webArticle/myFirstWebsite/Default.png",
+        "content": "",
         "alt": "test alt lol",
         "pagePath": ""
     }
