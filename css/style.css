@@ -76,13 +76,7 @@ main > section {
     font-size: 1.7em;
 }
 
-#postContent{
-    display: flex;
-    flex-flow: row wrap;
-    /* Post elements have a margin to the left. Display is flex so margin collapsing wont work
-       padding to left ensures posts keep a 7px gap from the container boundry */
-    padding-right: 7px;
-}
+
 
 .post{
     flex:1;
@@ -102,20 +96,7 @@ main > section {
     cursor: pointer;
 }
 
-.thumbnail {
-    margin: 10PX;
-    display: flex;
-    min-width: 100px;
-    justify-content: center; 
-    align-items: center;    
-} 
 
-.thumbnail > img {
-    overflow: hidden;
-    object-fit: cover;
-    height: 10em;
-    object-position: center;
-}
 
 .post > h3 {
     align-self: center;
@@ -128,6 +109,12 @@ main > section {
 .post > p { 
     padding: 1rem;
 }
+
+#postContent{
+        /* Post elements have a margin to the left. Display is flex so margin collapsing wont work
+        padding to left ensures posts keep a 7px gap from the container boundry */
+        padding-right: 7px;
+    }
 
 
 
@@ -169,6 +156,41 @@ main > section {
         overflow: hidden;
     }
 
+    #postContent{
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .post{
+        flex:1;
+        display: flex;
+        min-width: 200px;
+        max-width: 22rem;
+        flex-flow: column;
+        margin-bottom: 3px;
+        border: 2px solid black;
+        margin-left: 7px;  
+        max-height: 22rem;
+        /* Feels bad that one can't scroll and read all of the text. Adjust somehow */
+        overflow: hidden;
+    }
+
+    .thumbnail {
+        margin: 10PX;
+        display: flex;
+        min-width: 100px;
+        justify-content: center; 
+        align-items: center;    
+    } 
+
+    .thumbnail > img {
+        overflow: hidden;
+        object-fit: cover;
+        height: 10em;
+        object-position: center;
+    }
+
+
 }
 
 @media  (40em >= width) {
@@ -179,6 +201,42 @@ main > section {
     .aboutGal {
         display: none;
     }
+
+     #postContent{
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+    }
+
+    .post{
+        flex:1;
+        display: flex;
+        width:100%;
+        flex-flow: column;
+        margin-bottom: 3px;
+        border: 2px solid black;
+        margin-left: 7px;  
+        max-height: 22rem;
+        /* Feels bad that one can't scroll and read all of the text. Adjust somehow */
+        overflow: hidden;
+    }
+
+    .thumbnail {
+        margin: 10PX;
+        display: flex;
+        min-width: 100px;
+        justify-content: center; 
+        align-items: center;    
+    } 
+
+    .thumbnail > img {
+        overflow: hidden;
+        object-fit: cover;
+        height: 10em;
+        object-position: center;
+    }
+
+
 }
 
 footer {
