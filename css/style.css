@@ -79,6 +79,9 @@ main > section {
 #postContent{
     display: flex;
     flex-flow: row wrap;
+    /* Post elements have a margin to the left. Display is flex so margin collapsing wont work
+       padding to left ensures posts keep a 7px gap from the container boundry */
+    padding-right: 7px;
 }
 
 .post{
@@ -91,16 +94,8 @@ main > section {
     border: 2px solid black;
     margin-left: 7px;  
     max-height: 22rem;
+    /* Feels bad that one can't scroll and read all of the text. Adjust somehow */
     overflow: hidden;
-}
-
-/* first child */
-.post:nth-child(1) {
-    background-color: rgb(138, 90, 30);
-}
-/* Childrent that arent first */
-.post:nth-child(n+2) {
-    background-color:blue;
 }
 
 .post:hover {
@@ -165,6 +160,10 @@ main > section {
 @media  (40em >= width) {
     main {
         background-color: blue;
+    }
+
+    .aboutGal {
+        
     }
 }
 
