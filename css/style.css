@@ -78,6 +78,7 @@ main > section {
 
 .post:hover {
     cursor: pointer;
+    box-shadow: 0 0 2px black;
 }
 
 .post > h3 {
@@ -172,9 +173,6 @@ main > section {
 
 /* Portrait mode*/
 @media  (40em >= width) {
-    main {
-        background-color: blue;
-    }
 
     .aboutGal {
         display: none;
