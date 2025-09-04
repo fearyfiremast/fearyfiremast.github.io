@@ -67,6 +67,10 @@ main > section {
     padding-left: .4em;
 }
 
+hr {
+    margin: 1rem;
+}
+
 .postContainer > h2 {
     text-align: center;
     color: rgb(45, 44, 44);
