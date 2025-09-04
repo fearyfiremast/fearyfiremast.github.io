@@ -50,7 +50,7 @@ body{
     width: 95%;
 }
 
-.aboutTxt > h1 { /* TODO: Shrink blog name as window size decreases */
+.aboutTxt > h1 { 
     font-size: 3em;
 }
 
@@ -61,8 +61,6 @@ main {
 
 main > section {
     margin-top: 1vh;
-    border: 1px solid black;
-
 }
 
 .about {
@@ -74,6 +72,11 @@ main > section {
     color: rgb(45, 44, 44);
     grid-row: 1;
     font-size: 1.7em;
+}
+
+.post {
+    border: 2px solid black;
+    border-radius: 4px;
 }
 
 .post:hover {
@@ -93,23 +96,7 @@ main > section {
     padding: 1rem;
 }
 
-/* Desktop */
-@media (40em < width) {
-    .about {
-        display: grid;
-        grid-template-columns: 3fr 2fr;
-        grid-template-rows: minmax();
-        column-gap: 10px;
-        
-    }
-
-    .aboutTxt{
-        display: flex;
-        height: 100%;
-        flex-flow: column nowrap;
-    }
-
-    .aboutTxt > h1 {
+  .aboutTxt > h1 {
         white-space: nowrap;
         display: block;
         flex: 1 2;
@@ -117,11 +104,27 @@ main > section {
         align-content: center;
         
     }
-    
+
+    .aboutTxt{
+         display: flex;
+        height: 100%;
+        flex-flow: column nowrap;
+    }
+
     .aboutTxt > p {
         font-size: 1.2em;
         text-align: center; 
         flex: 2;
+    }
+
+/* Desktop */
+@media (40.5em < width) {
+    .about {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        grid-template-rows: minmax();
+        column-gap: 10px;
+        
     }
 
     .aboutGal > img {
@@ -146,7 +149,6 @@ main > section {
         max-width: 22rem;
         flex-flow: column;
         margin-bottom: 3px;
-        border: 2px solid black;
         margin-left: 7px;  
         max-height: 22rem;
         /* Feels bad that one can't scroll and read all of the text. Adjust somehow */
@@ -172,7 +174,7 @@ main > section {
 }
 
 /* Portrait mode*/
-@media  (40em >= width) {
+@media  (40.5em >= width) {
 
     .aboutGal {
         display: none;
@@ -188,7 +190,6 @@ main > section {
         flex:1;
         display: flex;
         flex-flow: column;
-        border: 2px solid black;
         margin: 3px 7px;  
         max-height: 22rem;
         /* Feels bad that one can't scroll and read all of the text. Adjust somehow */
@@ -209,7 +210,6 @@ main > section {
         height: 10em;
         object-position: center;
     }
-
 
 }
 
