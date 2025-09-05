@@ -15,16 +15,13 @@ body{
 }
 
 .navContainer {
-    background-color: black;
-    padding: 0.5em
+    background-color:rgb(88, 181, 183);
 }
 
 .navList {
     display: flex;
     flex-flow: row;
-    list-style: none; 
-
-   
+    list-style: none;  
 }
 
 .navList li {
@@ -33,12 +30,10 @@ body{
     text-align: center;
     align-items: center;
     justify-content: center;
-    border-radius: 1px;
-    border: 2px solid salmon;
 }
 
 .navList li:hover {
-    background-color: salmon;
+    background-color:rgb(77, 162, 164) ;
 }
 
 .navList li a {
@@ -46,7 +41,7 @@ body{
     font-size: large;
     padding: .4em;
     text-decoration: none;
-    color: azure;    
+    color: white;    
     overflow-wrap: break-word;
     width: 95%;
 }
