@@ -102,10 +102,12 @@ export async function updatePosts() {
             <div class="thumbnail">
                 <img src=${toAdd.thumbnail} alt="image">
             </div>
-            <h3>${toAdd.name}</h3>
-            <p>
-                ${toAdd.content}
-            </p>`;
+            <div class="postText">
+                <h3>${toAdd.name}</h3>
+                <p>
+                    ${toAdd.content}
+                </p>
+            </div>`;
 
         post.addEventListener("click", ()=> {
             // make sure

@@ -86,17 +86,22 @@ hr {
 .post:hover {
     cursor: pointer;
     box-shadow: 0 0 2px black;
+    
 }
 
-.post > h3 {
-    align-self: center;
-    justify-content: center;
+.post:hover .thumbnail > img {
+    /* Kinda an arbitraty value
+       Small enough that it isnt super noticable but does make a difference*/
+    transform: scale(1.005);
+}
+
+.post h3 {
     font-size: 2.1rem;
     padding: .5rem;
  
 }
 
-.post > p { 
+.post p { 
     padding: 1rem;
 }
 
@@ -193,25 +198,36 @@ hr {
     .post{
         flex:1;
         display: flex;
-        flex-flow: column;
         margin: 3px 7px;  
-        max-height: 22rem;
+        height: 40vh;
         /* Feels bad that one can't scroll and read all of the text. Adjust somehow */
         overflow: hidden;
+        
     }
+
+    .post h3 {
+      white-space: nowrap;
+      overflow-wrap: hidden;
+
+    }
+
+    .post p {
+        font-size: 1.2em;
+    }
+
 
     .thumbnail {
         margin: 10px;
         display: flex;
-        min-width: 100px;
+        min-width: 200px;
         justify-content: center; 
-        align-items: center;    
+        align-items: center;   
     } 
 
     .thumbnail > img {
         overflow: hidden;
         object-fit: cover;
-        height: 10em;
+        height: 12em;
         object-position: center;
     }
 
