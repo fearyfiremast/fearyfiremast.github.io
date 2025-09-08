@@ -13,7 +13,7 @@ class FeedStatus {
     constructor() {
         // Stores sorted JSON
         this.currentPostsDisplayed = 0;
-        this.postDisplayLimit = 3;
+        this.postDisplayLimit = 5;
 
         // Stores JSON object
         this.postDataList = null;

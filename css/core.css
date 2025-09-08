@@ -6,7 +6,6 @@
 }
 
 body{
-    display: grid;
     grid-template-columns: minmax(350px, 1fr); 
     background-color: rgb(250, 241, 229);
 
@@ -15,6 +14,7 @@ body{
 }
 
 .navContainer {
+    position: sticky;
     background-color:rgb(88, 181, 183);
 }
 
@@ -46,8 +46,13 @@ body{
     width: 95%;
 }
 
-.aboutTxt > h1 { 
+.about {
+    padding: 3em
+}
+
+.about > h1 { 
     font-size: 3em;
+    margin-bottom: 2rem;
 }
 
 main {
@@ -57,10 +62,6 @@ main {
 
 main > section {
     margin-top: 1vh;
-}
-
-.about {
-    padding-left: .4em;
 }
 
 hr {
@@ -101,7 +102,7 @@ hr {
     padding: 1rem;
 }
 
-  .aboutTxt > h1 {
+  .about > h1 {
         white-space: nowrap;
         display: block;
         flex: 1 2;
@@ -110,13 +111,12 @@ hr {
         
     }
 
-    .aboutTxt{
-         display: flex;
-        height: 100%;
+    .about{
+        display: flex;
         flex-flow: column nowrap;
     }
 
-    .aboutTxt > p {
+    .about > p {
         font-size: 1.2em;
         text-align: center; 
         flex: 2;
@@ -124,34 +124,19 @@ hr {
 
 /* Desktop */
 @media (40.5em < width) {
-    .about {
-        display: grid;
-        grid-template-columns: 3fr 2fr;
-        grid-template-rows: minmax();
-        column-gap: 10px;
-        
-    }
-
-    .aboutGal > img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        overflow: hidden;
-    }
 
     #postContent{
         display: flex;
         flex-flow: row wrap;
          /* Post elements have a margin to the left. Display is flex so margin collapsing wont work
         padding to left ensures posts keep a 7px gap from the container boundry */
-        padding-right: 7px;
     }
 
     .post{
         flex:1;
         display: flex;
-        min-width: 200px;
-        max-width: 22rem;
+        min-width: 32%;
+        max-width: 32%;
         flex-flow: column;
         margin-bottom: 3px;
         margin-left: 7px;  
@@ -180,11 +165,6 @@ hr {
 
 /* Portrait mode*/
 @media  (40.5em >= width) {
-
-    .aboutGal {
-        display: none;
-    }
-
      #postContent{
         display: flex;
         flex-flow: column wrap;

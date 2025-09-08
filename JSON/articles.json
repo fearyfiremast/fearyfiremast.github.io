@@ -22,5 +22,21 @@
         "content": "",
         "alt": "test alt lol",
         "pagePath": ""
+    },
+      {
+        "name": "My third website",
+        "date": "2020-08-10",
+        "thumbnail": "/images/webArticle/myFirstWebsite/Default.png",
+        "content": "",
+        "alt": "test alt lol",
+        "pagePath": ""
+    },
+      {
+        "name": "My third website",
+        "date": "2020-08-10",
+        "thumbnail": "/images/webArticle/myFirstWebsite/Default.png",
+        "content": "",
+        "alt": "test alt lol",
+        "pagePath": ""
     }
 ]
