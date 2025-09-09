@@ -14,7 +14,6 @@ body{
 }
 
 /* NAV */
-
 .navContainer {
     position: sticky;
     top: 0px;
@@ -49,127 +48,8 @@ body{
     overflow-wrap: break-word;
     width: 95%;
 }
-
-/* ABOUT */
-
-.about {
-    padding: 3em;
-    display: flex;
-    flex-flow: column nowrap;
-}
-
-.about > p {
-    font-size: 1.2em;
-    text-align: center; 
-    flex: 2;
-}
-
-.about > h1 { 
-    font-size: 3em;
-    margin-bottom: 2rem;
-}
-
-main {
-    margin-left: 2px;
-    margin-right: 2px
-}
-
-main > section {
-    margin-top: 1vh;
-}
-
-hr {
-    margin: 1rem;
-}
-
-/* POSTS */
-
-.postContainer > h2 {
-    text-align: center;
-    color: rgb(45, 44, 44);
-    grid-row: 1;
-    font-size: 1.7em;
-}
-
-.post {
-    border: 2px solid black;
-    border-radius: 4px;
-}
-
-.post:hover {
-    cursor: pointer;
-    box-shadow: 0 0 2px black;
-    
-}
-
-.post:hover .thumbnail > img {
-    /* Kinda an arbitraty value
-       Small enough that it isnt super noticable but does make a difference*/
-    transform: scale(1.005);
-}
-
-.post h3 {
-    font-size: 2.1rem;
-    padding: .5rem;
- 
-}
-
-.post p { 
-    padding: 1rem;
-}
-
-.about > h1 {
-    white-space: nowrap;
-    display: block;
-    flex: 1 2;
-    text-align: center;
-    align-content: center; 
-}
-
-#postContent{
-    display: flex;
-    flex-flow: column wrap;
-    width: 100%;
-}
-
-.post{
-    flex:1;
-    display: flex;
-    margin: 3px 7px;  
-    height: 40vh;
-    /* Feels bad that one can't scroll and read all of the text. Adjust somehow */
-    overflow: hidden; 
-}
-
-.thumbnail {
-    margin: 10PX;
-    display: flex;
-    min-width: 100px;
-    justify-content: center; 
-    align-items: center;    
-    
-} 
-
-.thumbnail > img {
-    overflow: hidden;
-    object-fit: cover;
-    height: 10em;
-    object-position: center;
-    z-index: 1;
-}
-
 /* FOOTER */
 
 footer {
     background-color: gray;
 }
-
-
-
-
-
-
-
-
-
-
