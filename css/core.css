@@ -6,12 +6,14 @@
 }
 
 body{
-    grid-template-columns: minmax(350px, 1fr); 
     background-color: rgb(250, 241, 229);
+    min-width: 425px;
 
     /*justify-self: center; Can be used to create the original centralized design I wanted
                             Another idea is to create empty columns beside middle column*/
 }
+
+/* NAV */
 
 .navContainer {
     position: sticky;
@@ -22,7 +24,8 @@ body{
 .navList {
     display: flex;
     flex-flow: row;
-    list-style: none;  
+    list-style: none; 
+    z-index: 100; 
 }
 
 .navList li {
@@ -47,8 +50,18 @@ body{
     width: 95%;
 }
 
+/* ABOUT */
+
 .about {
-    padding: 3em
+    padding: 3em;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.about > p {
+    font-size: 1.2em;
+    text-align: center; 
+    flex: 2;
 }
 
 .about > h1 { 
@@ -68,6 +81,8 @@ main > section {
 hr {
     margin: 1rem;
 }
+
+/* POSTS */
 
 .postContainer > h2 {
     text-align: center;
@@ -103,112 +118,47 @@ hr {
     padding: 1rem;
 }
 
-  .about > h1 {
-        white-space: nowrap;
-        display: block;
-        flex: 1 2;
-        text-align: center;
-        align-content: center;
-        
-    }
-
-    .about{
-        display: flex;
-        flex-flow: column nowrap;
-    }
-
-    .about > p {
-        font-size: 1.2em;
-        text-align: center; 
-        flex: 2;
-    }
-
-/* Desktop */
-@media (40.5em < width) {
-
-    #postContent{
-        display: flex;
-        flex-flow: row wrap;
-         /* Post elements have a margin to the left. Display is flex so margin collapsing wont work
-        padding to left ensures posts keep a 7px gap from the container boundry */
-    }
-
-    .post{
-        flex:1;
-        display: flex;
-        min-width: 32%;
-        max-width: 32%;
-        flex-flow: column;
-        margin-bottom: 3px;
-        margin-left: 7px;  
-        max-height: 22rem;
-        /* Feels bad that one can't scroll and read all of the text. Adjust somehow */
-        overflow: hidden;
-    }
-
-    .thumbnail {
-        margin: 10PX;
-        display: flex;
-        min-width: 100px;
-        justify-content: center; 
-        align-items: center;    
-    } 
-
-    .thumbnail > img {
-        overflow: hidden;
-        object-fit: cover;
-        height: 10em;
-        object-position: center;
-    }
-
-
+.about > h1 {
+    white-space: nowrap;
+    display: block;
+    flex: 1 2;
+    text-align: center;
+    align-content: center; 
 }
 
-/* Portrait mode*/
-@media  (40.5em >= width) {
-     #postContent{
-        display: flex;
-        flex-flow: column wrap;
-        width: 100%;
-    }
-
-    .post{
-        flex:1;
-        display: flex;
-        margin: 3px 7px;  
-        height: 40vh;
-        /* Feels bad that one can't scroll and read all of the text. Adjust somehow */
-        overflow: hidden;
-        
-    }
-
-    .post h3 {
-      white-space: nowrap;
-      overflow-wrap: hidden;
-
-    }
-
-    .post p {
-        font-size: 1.2em;
-    }
-
-
-    .thumbnail {
-        margin: 10px;
-        display: flex;
-        min-width: 200px;
-        justify-content: center; 
-        align-items: center;   
-    } 
-
-    .thumbnail > img {
-        overflow: hidden;
-        object-fit: cover;
-        height: 12em;
-        object-position: center;
-    }
-
+#postContent{
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
 }
+
+.post{
+    flex:1;
+    display: flex;
+    margin: 3px 7px;  
+    height: 40vh;
+    /* Feels bad that one can't scroll and read all of the text. Adjust somehow */
+    overflow: hidden; 
+}
+
+.thumbnail {
+    margin: 10PX;
+    display: flex;
+    min-width: 100px;
+    justify-content: center; 
+    align-items: center;    
+    
+} 
+
+.thumbnail > img {
+    overflow: hidden;
+    object-fit: cover;
+    height: 10em;
+    object-position: center;
+    z-index: 1;
+}
+
+/* FOOTER */
 
 footer {
     background-color: gray;
