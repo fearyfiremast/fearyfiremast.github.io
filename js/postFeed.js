@@ -38,6 +38,7 @@ class FeedStatus {
         .then((jsonResponse)=> {
             
             feedHelper.postDataList = [];
+            
             // jsonResponse is returned as an object
             for (const i in jsonResponse) {
                 feedHelper.postDataList.push(Object.seal(jsonResponse[i]))
