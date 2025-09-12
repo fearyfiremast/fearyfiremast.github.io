@@ -5,6 +5,8 @@
     font-family:Arial, Helvetica, sans-serif;
 }
 
+
+
 body{
     background-color: rgb(250, 241, 229);
     min-width: 425px;
@@ -12,6 +14,14 @@ body{
     /*justify-self: center; Can be used to create the original centralized design I wanted
                             Another idea is to create empty columns beside middle column*/
 }
+
+.banner {
+    background-image: url("\\images\\nature\\RockyCove.png");
+    background-size: cover;
+    background-position:center 47%;
+    height: 10vh;
+}
+
 
 /* NAV */
 .navContainer {
@@ -48,8 +58,8 @@ body{
     overflow-wrap: break-word;
     width: 95%;
 }
-/* FOOTER */
 
+/* FOOTER */
 footer {
     background-color: gray;
 }
