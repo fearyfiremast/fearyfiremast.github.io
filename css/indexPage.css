@@ -49,7 +49,8 @@ main > section {
     border-radius: 4px;
     flex:1;
     display: flex;
-    margin: 7px;  
+    /* Margin with 4 args defines margins of element from top in a clockwise manner */
+    margin: 0px 7px 7px 7px;  
     min-height: 200px;
     height: 40vh;
     /* Feels bad that one can't scroll and read all of the text. Adjust somehow */
