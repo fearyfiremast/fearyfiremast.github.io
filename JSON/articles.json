@@ -8,30 +8,14 @@
         "pagePath": ""
     },
     {
-        "name": "My second website",
+        "name": "Personal Blog",
         "date": "2025-08-23",
         "thumbnail": "\\images\\webArticle\\myFirstWebsite\\Default.png",
-        "content": "",
+        "content": "How I created the ",
         "alt": "test alt lol",
         "pagePath": "\\pages\\testPage.html"
     },
     {
-        "name": "My third website",
-        "date": "2020-08-10",
-        "thumbnail": "/images/webArticle/myFirstWebsite/Default.png",
-        "content": "",
-        "alt": "test alt lol",
-        "pagePath": ""
-    },
-      {
-        "name": "My third website",
-        "date": "2020-08-10",
-        "thumbnail": "/images/webArticle/myFirstWebsite/Default.png",
-        "content": "",
-        "alt": "test alt lol",
-        "pagePath": ""
-    },
-      {
         "name": "My third website",
         "date": "2020-08-10",
         "thumbnail": "/images/webArticle/myFirstWebsite/Default.png",

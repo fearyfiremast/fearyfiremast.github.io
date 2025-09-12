@@ -16,10 +16,13 @@ body{
 }
 
 .banner {
-    background-image: url("\\images\\nature\\RockyCove.png");
-    background-size: cover;
-    background-position:center 47%;
-    height: 10vh;
+    height: 10vh; 
+}
+
+.banner > img {
+    overflow: hidden;
+    object-fit: cover;
+    width: 100%;
 }
 
 
