@@ -39,20 +39,17 @@ main > section {
 }
 
 #postContent{
-    display: flex;
-    flex-flow: column wrap;
+    display: block;
     width: 100%;
 }
 
 .post {
     border: 2px solid black;
     border-radius: 4px;
-    flex:1;
     display: flex;
     /* Margin with 4 args defines margins of element from top in a clockwise manner */
     margin: 0px 20px 20px 20px;  
-    min-height: 300px;
-    max-height: 300px;
+    height: 300px;
     /* Feels bad that one can't scroll and read all of the text. Adjust somehow */
     overflow: hidden;
 }
@@ -68,21 +65,23 @@ main > section {
        Small enough that it isnt super noticable but does make a difference*/
     transform: scale(1.005);
 }
+.postText{
+    flex: 3;
+    margin: 0 3vw;
+    padding:  10px .5rem 2vh .5rem;
+}
 
 .post h3 {
     font-size: 2.1rem;
-    padding: .5rem;
-    margin-left: 3vw;
+    margin-bottom: .2rem;
 }
 
 .post p { 
-    /*Height, Width*/
-    margin: 0 3vw;
-    padding: 2vh .5rem;
     font-size: 1.2em;
 }
 
 .thumbnail {
+    flex: 2;
     margin: 10px;
     display: flex;
     min-width: 250px;
