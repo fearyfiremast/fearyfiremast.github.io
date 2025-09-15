@@ -52,7 +52,7 @@ main > section {
     /* Margin with 4 args defines margins of element from top in a clockwise manner */
     margin: 0px 20px 20px 20px;  
     min-height: 300px;
-    height: 40vh;
+    max-height: 300px;
     /* Feels bad that one can't scroll and read all of the text. Adjust somehow */
     overflow: hidden;
 }
@@ -76,10 +76,10 @@ main > section {
 }
 
 .post p { 
-    margin-left: 3vw;
-    padding: .5rem;
+    /*Height, Width*/
+    margin: 0 3vw;
+    padding: 2vh .5rem;
     font-size: 1.2em;
-    text-align: center; 
 }
 
 .thumbnail {
