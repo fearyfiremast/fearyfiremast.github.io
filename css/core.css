@@ -47,10 +47,14 @@ body{
 .navList li {
     flex: 1;
     display: flex;
-    /* Max width formula is the max width of main (W) divided by the number of nav items (n)
-       calc( W / n) include units. Currently this == 400px
-       then this value - 2*(margin +pudding) per side will provide the proper value
-       currently margin = 0 and padding = 2em*/
+    /* Formula only works to align nav to central content when main is centralized
+        ( W - 2*(m+p) / n)
+         W: max-width of main element
+         m: margin on one side of main
+         p: padding on one side of main
+         n: number of list items
+    */
+
     max-width: calc((1200px - 4em) / 3);
     text-align: center;
     align-items: center;
