@@ -105,7 +105,7 @@ export async function updatePosts() {
             </div>
             <div class="postText">
                 <h3>${toAdd.name}</h3>
-                <p>
+                <p class="pageBody">
                     ${toAdd.content}
                 </p>
             </div>`;
