@@ -53,8 +53,7 @@ body{
 }
 
 .navList li a {
-   
-    font-size: large;
+    font-size: 1.3rem;
     padding: .4em;
     text-decoration: none;
     color: white;    
