@@ -34,7 +34,7 @@
 
 .post:hover {
     cursor: pointer;
-    box-shadow: 0 0 2px black;
+    box-shadow: 0 0 3px rgb(138, 138, 138);
     
 }
 
