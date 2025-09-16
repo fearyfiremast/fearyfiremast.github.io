@@ -10,9 +10,11 @@
 /* POSTS */
 .postContainer > h2 {
     text-align: center;
-    color: rgb(45, 44, 44);
+    /* If i ever dull text when not highlighted use this colour
+    rgb(45, 44, 44);*/
+    color: black;
     grid-row: 1;
-    font-size: 1.7em;
+    font-size: 2.1em;
     margin: 2rem;
 }
 
