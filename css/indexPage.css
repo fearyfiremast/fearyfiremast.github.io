@@ -25,8 +25,7 @@
     border: 2px solid black;
     border-radius: 4px;
     display: flex;
-    /* Margin with 4 args defines margins of element from top in a clockwise manner */
-    margin: 0px 20px 20px 20px;  
+    margin: 0px 0px 20px 0px;  
     height: 300px;
     /* Feels bad that one can't scroll and read all of the text. Adjust somehow */
     overflow: hidden;

@@ -5,20 +5,16 @@
     font-family:Arial, Helvetica, sans-serif;
 }
 
-
-
 body{
     background-color: rgb(250, 241, 229);
     min-width: 425px;
     
     /* Code commented out in body and main rules help center the posts*/
-
-    /*display: flex;
-    flex-flow: column nowrap; */
-
-    /*justify-self: center; Can be used to create the original centralized design I wanted
-                            Another idea is to create empty columns beside middle column*/
+    display: flex;
+    flex-flow: column nowrap; 
 }
+
+/* BANNER */
 
 .banner {
     height: 10vh; 
@@ -37,6 +33,7 @@ body{
     position: sticky;
     top: 0px;
     background-color:rgb(88, 181, 183);
+    background-color:rgb(77, 162, 164) ;
     z-index: 100; 
 }
 
@@ -44,14 +41,21 @@ body{
     display: flex;
     flex-flow: row;
     list-style: none; 
+    justify-content: center;
 }
 
 .navList li {
     flex: 1;
     display: flex;
+    /* Max width formula is the max width of main (W) divided by the number of nav items (n)
+       calc( W / n) include units. Currently this == 400px
+       then this value - 2*(margin +pudding) per side will provide the proper value
+       currently margin = 0 and padding = 2em*/
+    max-width: calc((1200px - 4em) / 3);
     text-align: center;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
+    background-color:rgb(88, 181, 183);
 }
 
 .navList li:hover {
@@ -64,14 +68,15 @@ body{
     text-decoration: none;
     color: white;    
     overflow-wrap: break-word;
-    width: 95%;
 }
 
+
+/* MAIN */
 main {
     padding: 0 2em;
-    /*
+    /*Max-width here should be the same as the limit */
     max-width: 1200px;
-    align-self: center; */
+    align-self: center; 
 }
 
 .pageTitle {
