@@ -16,11 +16,11 @@ body{
 
 /* BANNER */
 
-.banner {
+#banner {
     height: 10vh; 
 }
 
-.banner > img {
+#banner > img {
     overflow: hidden;
     object-fit: cover;
     width: 100%;
@@ -99,7 +99,6 @@ main,
 footer {
     background-color: rgb(77, 162, 164);
     color: rgb(236, 236, 236);  
-
     display: flex;
     flex-flow: column nowrap; 
 }
@@ -107,4 +106,9 @@ footer {
 footer > h2 {
     text-align: center;
     padding: 1em;
+}
+
+footer > div {
+    display: flex;
+    flex-flow: row nowrap;
 }
