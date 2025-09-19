@@ -122,5 +122,8 @@ export async function updatePosts() {
     }
 
     feedHelper.currentPostsDisplayed += itemsToAdd;
-
 }
+
+
+// Run
+updatePosts()
