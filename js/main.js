@@ -6,15 +6,16 @@
  */
 async function initialize() {
 
-    applyBanner()
-    applyNav();
+    appendBanner()
+    appendNav();
+    addInnerFooter();
     return;
 }
 
 /**  Allows the dynamic updating of banner
  * 
  */
-function applyBanner() {
+function appendBanner() {
     // Useful when I want to make banners dynamic
     //const pageTitle = document.title;
     const bannerElement = document.getElementById("banner");
@@ -33,7 +34,7 @@ function applyBanner() {
  * Appends nav html to class. Main purpose is to keep code that used across entire
  * site in one place.
  */
-function applyNav(){
+function appendNav(){
     const navElement = document.getElementById("navContainer");
     const toAppend = document.createElement("ul");
     toAppend.classList.add("navList");
@@ -50,6 +51,26 @@ function applyNav(){
 
     navElement.appendChild(toAppend);
     return
+}
+
+/**
+ * Finds the first footer tag in a page and adds innerHTML that should be
+ * consistent site wide
+ */
+function addInnerFooter() {
+    // getElementsByTagName does returns an object of type HTMLCollection
+    // For historical reasons. This was implemented before arrays seemingly.
+    const footerElement = document.getElementsByTagName("footer")[0];
+
+    // innerHTML is not secure. Can be injected with scripts.
+    footerElement.innerHTML = `
+        <h2>Get in Touch</h2>
+        <div class="feedStructure">
+            <img src="\\images\\core\\brand\\github-mark-white.png" alt="Github link">
+            <img src="\\images\\core\\brand\\InBug-White.png" alt="LinkedIn Link">
+            <img src="\\images\\core\\brand\\pngtree-email-icon-png-image_5065641.jpg" alt="email">
+        </div>`;
+    return;
 }
 
 initialize();
