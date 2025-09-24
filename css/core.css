@@ -79,6 +79,9 @@ main,
     padding: 0 2em;
     /*Max-width here should be the same as the limit */
     max-width: 1200px;
+}
+
+main{
     align-self: center; 
 }
 
@@ -94,13 +97,13 @@ main,
     font-size: 1.2em;
 }
 
-
 /* FOOTER */
 footer {
     background-color: rgb(77, 162, 164);
     color: rgb(236, 236, 236);  
     display: flex;
     flex-flow: column nowrap; 
+    align-items: center;
 }
 
 footer > h2 {
@@ -110,5 +113,12 @@ footer > h2 {
 
 footer > div {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row;
+    margin-bottom: 1em;
+}
+
+.feedStructure > img {
+    flex: 1;
+    max-width: 85px;
+    margin: 0 7vw ;
 }
