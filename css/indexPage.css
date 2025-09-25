@@ -1,9 +1,9 @@
 /* ABOUT */
-.about {
-    padding: 2em 0;
+.pageTitle {
+    font-size: 3em;
 }
 
-.about > p {
+.pageInfoContainer > p {
     text-align: center; 
 }
 
@@ -11,7 +11,7 @@
 .postContainer > h2 {
     text-align: center;
     /* If i ever dull text when not highlighted use this colour
-    rgb(45, 44, 44);*/
+       rgb(45, 44, 44);*/
     color: black;
     grid-row: 1;
     font-size: 2.1em;

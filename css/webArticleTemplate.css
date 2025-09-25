@@ -1,0 +1,21 @@
+.pageTitle{
+    text-decoration: underline;
+    font-size: 2.4rem;
+}
+
+.pageBody {
+    text-align: center;
+}
+
+/* Sections that arent */
+section:nth-child(n+2) {
+    margin-bottom: 2rem;
+}
+
+section > h2 {
+    margin-bottom: 1rem;
+}
+
+section p {
+    margin: .5rem;
+}
