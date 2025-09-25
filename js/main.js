@@ -35,7 +35,7 @@ function appendBanner() {
  * site in one place.
  */
 function appendNav(){
-    const navElement = document.getElementById("navContainer");
+    const navElement = document.getElementsByClassName("navContainer")[0];
     const toAppend = document.createElement("ul");
     toAppend.classList.add("navList");
     toAppend.innerHTML = `

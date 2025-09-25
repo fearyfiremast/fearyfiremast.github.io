@@ -11,9 +11,9 @@
         "name": "Personal Blog",
         "date": "2025-08-23",
         "thumbnail": "\\images\\webArticle\\myFirstWebsite\\Default.png",
-        "content": "How I created the ",
+        "content": "How I created the website that you see today in this current form",
         "alt": "test alt lol",
-        "pagePath": "\\pages\\testPage.html"
+        "pagePath": ""
     },
     {
         "name": "My third website",
