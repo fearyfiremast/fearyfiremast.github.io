@@ -13,7 +13,7 @@
         "thumbnail": "\\images\\webArticle\\myFirstWebsite\\Default.png",
         "content": "How I created the website that you see today in this current form",
         "alt": "test alt lol",
-        "pagePath": ""
+        "pagePath": "\\pages\\webArticles\\PersonalBlogArticle.html"
     },
     {
         "name": "My third website",
