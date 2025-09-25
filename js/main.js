@@ -18,7 +18,7 @@ async function initialize() {
 function appendBanner() {
     // Useful when I want to make banners dynamic
     //const pageTitle = document.title;
-    const bannerElement = document.getElementById("banner");
+    const bannerElement = document.getElementsByClassName("banner")[0];
     // Update in future to name banner based on pageTitle
     // If banner not found imgPath reverts to default
     let imgName = "default";
