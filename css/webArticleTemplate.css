@@ -27,9 +27,9 @@ section > h2 {
 .articleLabels p {
     display: inline-block;
     width:fit-content;
-    
+
     /* Tinker with value*/
-    font-weight: bold;
+    font-weight:400;
 }
 
 .articleLabels p:nth-child(n+2) {
