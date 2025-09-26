@@ -7,40 +7,25 @@ section > h2 {
     margin-bottom: 1rem;
 }
 
-/* PageInfo */
 .pageTitle{
     text-decoration: underline;
     font-size: 2.4rem;
+    margin-bottom: 2rem;
 }
 
-.pageBody {
-    text-align: center;
-}
-
-.articleLabels {
-    /* Works so that the the text contained within article layer is placed
-       Exactly on the bottom of the pageTitle margin. It is not flush with
-       the <hr> so it may need to be adjusted further*/
-    margin-top: -1.5rem;
-}
-
-.articleLabels p {
+.articleLabels > p {
     display: inline-block;
     width:fit-content;
 
     /* Tinker with value*/
     font-weight:400;
-}
-
-.articleLabels p:nth-child(2) {
-    float: right;
-    margin-left: 6vw;
-}
-
-.articleLabels p:nth-child(n+3) {
     margin-top: 0.3rem;
 }
 
+.articleLabels > p:last-of-type {
+    float: right;
+    margin-left: 6vw;
+}
 
 /* Sections that arent first*/
 section:nth-child(n+2) {
