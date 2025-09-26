@@ -32,9 +32,13 @@ section > h2 {
     font-weight:400;
 }
 
-.articleLabels p:nth-child(n+2) {
+.articleLabels p:nth-child(2) {
     float: right;
     margin-left: 6vw;
+}
+
+.articleLabels p:nth-child(n+3) {
+    margin-top: 0.3rem;
 }
 
 
