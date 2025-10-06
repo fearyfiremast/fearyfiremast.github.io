@@ -1,6 +1,10 @@
 /* General */
 section p {
-    margin: .5rem;
+    margin: .5rem 0;
+}
+
+main > section > div {
+    padding-left: .5rem;
 }
 
 section > h2 {
@@ -32,5 +36,12 @@ section:nth-child(n+2) {
     margin-bottom: 2rem;
 }
 
+.pageBody > ul {
+    list-style-position: outside;
+    padding-left: 3rem;
+}
 
+.pageBody > ul li {
+    margin-bottom: .25rem;
+}
 
