@@ -7,6 +7,10 @@ main > section > div {
     padding-left: .5rem;
 }
 
+main img {
+    width: 100%
+}
+
 section > h2 {
     margin-bottom: 1rem;
 }
@@ -36,6 +40,11 @@ section:nth-child(n+2) {
     margin-bottom: 2rem;
 }
 
+.indexDiagram{
+    height: 40vh;
+    background-color:rgb(247, 234, 216);
+}
+
 .pageBody > ul {
     list-style-position: outside;
     padding-left: 3rem;
@@ -43,5 +52,6 @@ section:nth-child(n+2) {
 
 .pageBody > ul li {
     margin-bottom: .25rem;
+    padding-left: 1rem;
 }
 
