@@ -51,7 +51,6 @@ section:nth-child(n+2) {
 }
 
 .pageBody > ul li {
-    margin-bottom: .25rem;
     padding-left: 1rem;
 }
 
