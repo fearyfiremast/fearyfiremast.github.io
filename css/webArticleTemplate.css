@@ -15,6 +15,7 @@ section > h2 {
     margin-bottom: 1rem;
 }
 
+/* OVER THE FOLD */
 .pageTitle{
     text-decoration: underline;
     font-size: 2.4rem;
@@ -35,16 +36,13 @@ section > h2 {
     margin-left: 6vw;
 }
 
+/* SECTIONS */
 /* Sections that arent first*/
 section:nth-child(n+2) {
     margin-bottom: 2rem;
 }
 
-.indexDiagram{
-    height: 40vh;
-    background-color:rgb(247, 234, 216);
-}
-
+/* Bullet point styling */
 .pageBody > ul {
     list-style-position: outside;
     padding-left: 3rem;
@@ -52,5 +50,11 @@ section:nth-child(n+2) {
 
 .pageBody > ul li {
     padding-left: 1rem;
+}
+
+/* IMAGES */
+.imageBG {
+    height: 40vh;
+    background-color:rgb(247, 234, 216);
 }
 
