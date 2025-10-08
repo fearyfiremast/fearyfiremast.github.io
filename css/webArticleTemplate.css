@@ -54,6 +54,7 @@ section:nth-child(n+2) {
 
 /* IMAGES */
 .imageBG {
+    padding: 10px;
     height: 40vh;
     background-color:rgb(247, 234, 216);
 }
