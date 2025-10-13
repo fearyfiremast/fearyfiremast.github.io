@@ -33,7 +33,7 @@
             <h2>Project Overview</h2>
             <div class="pageBody">
                 <p> 
-                    This project began in July 2025 to immerse myself in the fundamentals of website development. From both a technical perspective – using HTML 5, CSS, and JavaScript – and a UX perspective, resulting in a presentable and easy to use site at any window size. Additionally, Trello and Git were used as tools to support the development. The key learnings from this project are:
+                    What became this portfolio began creation in July 2025 and existed as a way to reinforce the fundamentals of website development. Enhancing both technical – HTML 5, CSS, and JavaScript – and UX skills. The results are a presentable and easy to use site at any window size. The key learnings from this project are:
                 </p>
                 <ul>
                     <li><span>Uses of DOM manipulation using JavaScript</span></li>
@@ -42,7 +42,7 @@
                     <li><span>The fundamentals of good visual design</span></li>
                 </ul>
                 <p>
-                    The project was created so that unnecessary features (at the time of writing) have the infrastructure required to make implementation easy further down the line. 
+                    The project was created with extension in mind.
                 </p>
                 <div class="imageBG">
                     <!--<img src="\images\webArticle\portfolioArticle\portfolioPageScreenshot.png"> -->
@@ -55,16 +55,18 @@
          <section>
             <h2>Article Overview</h2>
             <div class="pageBody">
-                <p >This article is divided into 3 main sections before concluding: </p>
+                <p >
+                    This article is divided into 3 main sections:
+                </p>
                 <ul>
                     <li>
-                        Background: Covers the circumstances in which the project was primarily developed as well as resources used for learning and tools used to assist the effort.
+                        Background: Covers the context that the portfolio was primarily developed in. Additionally, references resources used for learning.
                     </li>
                     <li>
-                        Flexboxes and Responsive Design: About the CSS that was used to create the website’s design. Goes over a learning experience with flex displays and discusses some of the aesthetic decisions that were made.
+                        Flexboxes and Responsive Design: About the CSS that was used to style the website. Goes over a learning experience with flex displays and discusses some of the aesthetic decisions that I made.                    
                     </li>
                     <li>
-                        DOM Manipulation: How I made the website dynamic using JavaScript. Goes into detail about injecting elements from modules, maintainability, as well as using FetchAPI to load resources.
+                        DOM Manipulation: How I made the website dynamic using JavaScript. Goes into detail about injecting elements from modules, maintainability, as well as using Fetch API to load resources.                    
                     </li>
                 </ul>
             </div>   
@@ -74,23 +76,20 @@
          <section>
             <h2>Background</h2>
             <div class="pageBody">
-                 <p >
-                    This section’s main purpose is to put the project in its proper context. It’s primarily anecdotal. The sections that follow this one goes into more technical detail. 
+                <p>
+                    The idea to create a website began with the rediscovery of an old book that taught the fundamentals of web design. After reading through the book and following through with each of the exercises I began to work on another project. However, as soon as I began to work in the way that they taught me, the syntax to do the simplest things were convoluted and it seemed that there must be a simpler way.                 
                 </p>
                 <p>
-                    The idea to create a website began with the rediscovery of an old book that taught the fundamentals of web design. After reading through the book and following through with each of the exercises I began to work on another project. However, as soon as I began to work in the way that they taught me, the syntax to do the simplest things were convoluted and it seemed that there must be a simpler way. 
-                </p>
-                <p>
-                    I looked for online resources and found MDN docs. After browsing through the materials, it appeared to have a higher overall quality than the book. From around May to July after my shifts I would take notes and follow along with the provided exercises and quizzes. Finally in late July I had learned the bare necessities and began work on this website.
+                    I looked for resources online and found MDN docs. After browsing through the materials, it appeared to have a higher overall quality than the book. From around May to July after my shifts I would take notes and follow along with the provided exercises and quizzes. Finally in late July I had learned the bare necessities and began work on this website.               
                 </p>
             </div>    
         </section>
 
         <section>
-            <h2>Flexboxes and Design</h2>
+            <h2>Flexboxes and Responsive Design (CSS)</h2>
             <div class="pageBody">
                 <p>
-                    The design that was settled on after some iteration ended up being almost entirely flexbox based. Flexboxes were used ubiquitously after I received some feedback on designs that used grids to present parallel information to my main text. 
+                    Each significant component of the website for this iteration of the project was implemented with flexbox displays. Their ubiquity came after I received some feedback on designs that used grids to present parallel information to my main text. Presenting information along a single axis helps it stand out.                
                 </p>
             </div>    
             <div class="imageBG">
@@ -99,29 +98,25 @@
             </div>
             <div class="pageBody">
                 <p>
-                    Mostly what I removed was the gallery section, which at the time only held an image I took when on a camping trip. At the time I had imagined the gallery would later turn into a carousal that would cycle between images I took or page updates. The feedback I received from a UX designer was that the images distracted from the main content on my site, which was supposed to be the project showcases. Thus, as the project matured, the need for the gallery, and thus grids diminished as the delivery of information was streamlined.
+                    Each significant component of the website for this iteration of the project was implemented with flexbox displays. Their ubiquity came after I received some feedback on designs that used grids to present parallel information to my main text. Presenting information along a single axis helps it stand out.                
                 </p>
                 <p>
-                    Flexbox displays excel at organizing child items along one dimension. They can be seen at work everywhere in the site, the navigation bar, project display, footer, and main content are all made of at least one flex container.
+                    The greatest learning experience for conceptualizing how style rules affect elements was creating the navigation bar. Given how flexboxes were presented, I found it intuitive to make the encapsulating ‘ul’ element a flexbox and set the ‘li’ child to share an equal proportion of the available space. This distributes space among the flex items equally along the main axis (in this case horizontally). However, it did not ensure that text inside the flex items were distributed equally along the cross axis because the flex rules only apply to the flex containers immediate children. The solution to the problem was to nest flex containers inside each other and align their content centrally.                
                 </p>
                 <p>
-                    The greatest learning experience for conceptualizing how style rules affect elements, as well as the internal representation of the elements was creating the navigation bar. Given how flexboxes were presented, I found it intuitive to make the encapsulating 'ul' element a flexbox and set the 'li' to share an equal proportion of the available space. This distributes the space of the items equally along the horizontal axis however it did not ensure that text inside the flex items were distributed equally along the cross axis because the flex rules only apply to the flex containers immediate children by default. The solution to the problem was to nest flex containers inside each other and align their content centrally.
-                </p>
-                <p>
-                    One of the most engaging aspects of the project was designing the layout of each page type, in addition to adding subtle effects to the page to enhance its appeal. Before I implemented any design, I always sketched it out first to get a feel for it. Elements would be annotated it with explanations for certain behaviours if it was warranted.
+                    One of the most engaging aspects of the project was designing the layout of each page type, as well as adding subtle effects to the page to enhance its appeal. Before I implemented any design, I always sketched it out first to get a feel for it. Elements would be annotated it with explanations for certain behaviours if it was warranted.                
                 </p>
             </div>
             <div class="imageBG">
                     <!--<img src="\"> -->
                     diagram here
             </div>
-            
             <div class="pageBody">
                 <p>
                     The component that went through the most iterations were the article cards on the home page. Sometimes they were vertically oriented cards, other times they were horizontal. Both designs ended up being used in the final design as they suited different screen widths better. Try playing with the size of the viewport to see it!
                 </p>
                 <p>
-                    Another satisfying part of the design process was adding small, and little effects to the elements with what ended up being simple CSS. The navigation buttons changing to the secondary blue colour when hovered over by the mouse is particularly satisfying to me. My favourite though is the hover effect over the project articles. A slight gray shadow will surround the border of the card, in addition to the image being scaled by a factor of 1.05. It is a subtle effect and is hardly noticeable but makes it feel fun to be on the site.
+                    Another satisfying part of the design process was adding small scale effects to the elements with simple CSS and its pseudo-classes. The navigation buttons changing to the secondary blue colour when hovered over by the mouse is particularly satisfying to me. My favourite though is the hover effect over the project articles. A slight gray shadow will surround the border of the card, in addition to the image being scaled by a factor of 1.05. It is a subtle effect and is hardly noticeable but makes it fun to interact with the site.
                 </p>
             </div>
         </section>
@@ -130,19 +125,19 @@
             <h2>DOM manipulation</h2>
             <div class="pageBody">
                 <p >
-                    The site presents as static, but just beneath the surface JavaScript is responsible for inserting most of the content you see. All the banner, nav, and footer sections are appended when the page loads. The articles in the ‘projects’ section on the index page are also dynamic but is more complicated than the other injected content.
+                    The site presents as static, but just beneath the surface JavaScript is responsible for inserting most of the content you see. All the banner, nav, and footer sections are appended when the page loads. The articles in the ‘projects’ section on the index page are also dynamic but is more complicated than the other injected content.                
                 </p>
                 <p>
-                    Once the DOM for any page on the site is finished constructing the ‘main.js’ module is called. This script searches the page is called on for specific CSS classes and on the first match found, appends some HTML with the proper tags. The reason for doing this dynamically is to improve the maintainability of the site. I found that as soon as I began working on multiple pages at a time, there were many common elements that I would want to transfer over. This could be done easily with a quick copy and paste, but this solution both bloats the code base and is error prone. For example, if I found a bug in one of the common elements, I would need to manually update the text for each page that contains it. This is generally tedious and could result in the fixes not being applied to all pages if one wasn’t updated or was updated incorrectly. Another bonus to having the html written in one shared JavaScript is the opportunity to dynamically change a resource depending on the sites state in code.
+                    Once the DOM for any page on the site is finished constructing the ‘main.js’ module is called. This script searches the page for specific CSS classes and appends some HTML. The reason for doing this dynamically is to improve the maintainability of the site. I found that as soon as I began working on multiple pages, there were many common elements that I would want to transfer over. This could be done easily with a quick copy and paste, but this solution both bloats the code base and is error prone. For example, if I found a bug in one of the common elements, I would need to manually update the text for each page that contains it. This is a tedious process and could result in the fixes not being applied to all pages if one was missed or updated incorrectly. Another bonus to having the HTML written in one shared module is the opportunity to dynamically change a resource depending on the sites state in code.
                 </p>
                 <p>
-                    The reason for the post being dynamically created and added to the homepage upon loading is not as practical as for the core elements described before. Instead, it was because I thought it would be cool if the page retrieved information from a JSON file and was formatted into an easily digestible card. Being able to retrieval a store of information and representing it in memory would allow for user sorting, automatic content formatting, and mimics ‘data driven’ designs in a very simple way which seemed like an interesting challenge.
+                    The reason for the post being dynamically created and added to the homepage upon loading is not as practical as for the core elements described before. Instead, it was implemented because I thought it would be cool if the page retrieved information from a JSON file and was formatted into an easily digestible card. Being able to retrieval a store of information and representing it in memory could allow for user sorting, automatic content formatting, and mimics ‘data driven’ designs in a very simple way. Most of the described features are not currently implemented, but with the fundamental mechanism in place most of the work is already done.
                 </p>
                 <p>
-                    Once I established the things that I wanted to define the systems state I began working on retrieving the JSON document. Because the function dedicated to loading the articles requires the cards to exist, the method that retrieves them in the first place had to have fulfilled its promise to proceed with the rest of the functionality. As a result, this is a fairly simple use for concurrent processing that acts like a sequential process.
+                    Once I established the attributes that I wanted to define the systems state I began working on retrieving the JSON document. Because the function dedicated to loading and then appending the cards onto the site, it was essential that raw JSON was loaded into memory. A method was created to retrieve the data if it found that they did not exist. Because I used fetch API to retrieve the data both the highest level function, and the method introduced to gather the data needed to be asynchronous so I could halt execution until the promise was fulfilled.
                 </p>
                 <p>
-                    Once I finished my first experiment with async methods in JS I began creating the driver function for the ‘managePosts’ script. At this point when I called the called loadJson I began to run into errors caused by a race condition. LoadJson was an async function and was awaited inside the calling function, so I was confused by the fact all my data was returning null. It turns out the issue was caused by the Fetch call inside the loadJson method was returning an empty promise immediately (as async functions do) which caused the driver function to carry on with the rest of its responsibilities under the false assumption that the data was already in memory. This was easily fixed by adding another await inside loadJson.
+                    At this point when I called the called loadJson() I began to run into errors caused by a race condition. LoadJson() was being called with the await keyword, so I assumed once it returned it was guaranteed to have the information from the targeted file. Unfortunately, on the first draft of the process I did not consider that because the fetch chain I was using was also async it would return an unfulfilled promise immediately while concurrently it continued processing the request. Once I realized this quirk of the behavior I awaited the fetch chain inside loadJson() and the issue was resolved.
                 </p>
             </div>        
         </section>
@@ -151,7 +146,7 @@
             <h2>Conclusion</h2>
             <div class="pageBody">
                 <p >
-                    Creating this website and learning the essentials for front-end web development, the blend of technical expertise and creativity, made for a rewarding project on many fronts. The final form of this project is perfect for the scale its operating at but has the underlying infrastructure to offer improved functionality easily. Looking to the future, it might be worthwhile to refactor the post system to take advantage of a client-side framework like react, in addition to updating the site with in-depth project articles.
+                    Creating this website, learning the essentials for front-end web development, the blend of technical expertise and creativity, all made for a rewarding project on many fronts. The final form of this project is perfect for the scale its operating at but has the underlying infrastructure to increase functionality easily. Looking to the future, it might be worthwhile to refactor the post system to take advantage of a client-side framework like react, in addition to updating the site with in-depth project articles.
                 </p>
             </div>        
         </section>
