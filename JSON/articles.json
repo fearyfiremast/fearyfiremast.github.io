@@ -8,10 +8,10 @@
         "pagePath": ""
     },
     {
-        "name": "Personal Blog",
+        "name": "Portfolio page",
         "date": "2025-08-23",
         "thumbnail": "\\images\\webArticle\\myFirstWebsite\\Default.png",
-        "content": "How I created the website that you see today in this current form",
+        "content": "The original history and development stories behind the creation of this webpage.",
         "alt": "test alt lol",
         "pagePath": "\\pages\\webArticles\\PersonalBlogArticle.html"
     },
