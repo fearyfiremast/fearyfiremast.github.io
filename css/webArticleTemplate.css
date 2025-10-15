@@ -1,12 +1,21 @@
 /* General */
 section p {
-    margin: .5rem;
+    margin: .5rem 0;
+}
+
+main > section > div {
+    padding-left: .5rem;
+}
+
+main img {
+    width: 100%
 }
 
 section > h2 {
     margin-bottom: 1rem;
 }
 
+/* OVER THE FOLD */
 .pageTitle{
     text-decoration: underline;
     font-size: 2.4rem;
@@ -27,10 +36,26 @@ section > h2 {
     margin-left: 6vw;
 }
 
+/* SECTIONS */
 /* Sections that arent first*/
 section:nth-child(n+2) {
     margin-bottom: 2rem;
 }
 
+/* Bullet point styling */
+.pageBody > ul {
+    list-style-position: outside;
+    padding-left: 3rem;
+}
 
+.pageBody > ul li {
+    padding-left: 1rem;
+}
+
+/* IMAGES */
+.imageBG {
+    padding: 10px;
+    height: 40vh;
+    background-color:rgb(247, 234, 216);
+}
 

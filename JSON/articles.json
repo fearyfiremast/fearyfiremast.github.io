@@ -4,15 +4,15 @@
         "date": "2025-08-10",
         "thumbnail": "/images/nature/RockyCove.png",
         "content": "Hello This is the content for my first website I hope you enjoy it very much. Lol Lmao",
-        "alt": "test alt lol",
+        "alt": "thumbnail for ",
         "pagePath": ""
     },
     {
-        "name": "Personal Blog",
+        "name": "Portfolio page",
         "date": "2025-08-23",
         "thumbnail": "\\images\\webArticle\\myFirstWebsite\\Default.png",
-        "content": "How I created the website that you see today in this current form",
-        "alt": "test alt lol",
+        "content": "The original history and development stories behind the creation of this webpage.",
+        "alt": "The first iteration of the website.",
         "pagePath": "\\pages\\webArticles\\PersonalBlogArticle.html"
     },
     {
