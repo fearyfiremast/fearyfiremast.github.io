@@ -16,7 +16,6 @@ const Home = () => {
     <PageTemplate>
       {/* Cover */}
       <ATFHome />
-      <hr className="my-4"/>
       <HighlightedProject slug="portfolio-site"/>
       {/* Project Showcase */}
       <section className="mt-16">
