@@ -5,7 +5,7 @@
 const ATFHome = () => {
 
   return (
-    <section className="h-110 py-10 flex group">
+    <section className="h-110 py-10 flex group mb-16">
       <div className=" w-[50%] h-full object-cover  bg-gray-600">
         <img className="w-full h-full transition duration-300 group-hover:-translate-y-4 group-hover:translate-x-2" src="https://placehold.co/500x320" />
       </div>
