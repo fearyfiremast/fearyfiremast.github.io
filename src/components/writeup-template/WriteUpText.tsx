@@ -3,10 +3,10 @@ export interface WUT_body_text {
   body: string
 }
 
-const WriteUpText = () => {
+const WriteUpText = ({ body }: Omit<WUT_body_text, 'type'>) => {
   return (
     <div>
-      TODO: WriteUpText
+      {body}
     </div>
   )
 }

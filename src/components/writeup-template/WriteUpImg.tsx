@@ -5,10 +5,13 @@ export interface WUT_body_img {
   caption: string
 }
 
-const WriteUpImg = () => {
+const WriteUpImg = ({url, alt, caption}: Omit<WUT_body_img, 'type'>) => {
   return (
     <div>
-      TODO: Img
+      <div>
+        <img src={url ?? 'https://plachold.co/400'} alt={alt ?? ''} />
+      </div>
+      <p>{caption}</p>
     </div>
   )
 }
