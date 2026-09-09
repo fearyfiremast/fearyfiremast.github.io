@@ -9,6 +9,12 @@ export type ProjectInfo = {
 
 export const PROJECTS: ProjectInfo[] = [
   {
+    slug: 'test',
+    title: 'test project',
+    description: 'This project will be removed before final release',
+    imgUrl: '',
+  },
+  {
     slug: 'portfolio-site',
     title: 'portfolio site project',
     description: `The development history behind the creation of this website. 

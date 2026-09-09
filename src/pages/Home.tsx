@@ -7,7 +7,7 @@ import ATFHome from "../components/home/ATFHome"
 const Home = () => {
 
   const highlightedArticles: string[] = [
-    'portfolio-site',
+    'test',
     'blueprint-website-v2',
     'cip-cta'
   ]
